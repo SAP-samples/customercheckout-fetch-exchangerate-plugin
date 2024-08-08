@@ -9,6 +9,8 @@
 Sample code for a plugin to fetch live exchange rates integrated via the SAP Customer Checkout plugin framework.
 
 ## Project Structure
+The plugin works out of the box with the provided example `Exchange Rate API`. Credits <a href="https://www.exchangerate-api.com">Rates By Exchange Rate API</a>.
+
 This sample project is structured in a way to allow for quick expansion of the available APIs.
 To add a new API `Foo`:
 
@@ -38,6 +40,3 @@ If you wish to contribute code, offer fixes or improvements, please send a pull 
 
 ## License
 Copyright (c) 2024 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSE) file.
-
-## Credits
-Credits <a href="https://www.exchangerate-api.com">Rates By Exchange Rate API</a>
