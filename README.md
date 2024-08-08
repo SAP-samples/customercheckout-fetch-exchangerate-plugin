@@ -1,18 +1,4 @@
-# SAP-samples/repository-template
-This default template for SAP Samples repositories includes files for README, LICENSE, and .reuse/dep5. All repositories on github.com/SAP-samples will be created based on this template.
-
-# Containing Files
-
-1. The LICENSE file:
-In most cases, the license for SAP sample projects is `Apache 2.0`.
-
-2. The .reuse/dep5 file: 
-The [Reuse Tool](https://reuse.software/) must be used for your samples project. You can find the .reuse/dep5 in the project initial. Please replace the parts inside the single angle quotation marks < > by the specific information for your repository.
-
-3. The README.md file (this file):
-Please edit this file as it is the primary description file for your project. You can find some placeholder titles for sections below.
-
-# [Title]
+# SAP Customer Checkout FetchExchangeRate Plugin
 <!-- Please include descriptive title -->
 
 <!--- Register repository https://api.reuse.software/register, then add REUSE badge:
@@ -20,17 +6,30 @@ Please edit this file as it is the primary description file for your project. Yo
 -->
 
 ## Description
-<!-- Please include SEO-friendly description -->
+Sample code for a plugin to fetch live exchange rates integrated via the SAP Customer Checkout plugin framework.
+
+## Project Structure
+This sample project is structured in a way to allow for quick expansion of the available APIs.
+To add a new API `Foo`:
+
+1. Add a new `FooApiClient` by extending `RetrofitClient` and declaring the endpoints as well as the response `DTO` (data transfer object) of the service
+2. Add a new  `FooApiCommunicator` by extending `AbstractCommunicator` and implementing the HTTP(s) communication logic that is necessary for your API
+3. Add a new `FooApi` by extending `AbstractExchangeAPI` and implementing the `exchangeRateInRelationToUSD` method.
+4. Extend the `APIFactory` with a new `public static AbstractExchangeAPI fooAPI()` method.
+
+Finally, you can select the API in the `FetchExchangeRatePlugin::startup` method.
 
 ## Requirements
+Working instance of the SAP Customer Checkout Point of Sales software.
 
 ## Download and Installation
+Set the path to your ENV.jar, then build via maven `mvn clean install`.
 
 ## Known Issues
-<!-- You may simply state "No known issues. -->
+No known issues.
 
 ## How to obtain support
-[Create an issue](https://github.com/SAP-samples/<repository-name>/issues) in this repository if you find a bug or have questions about the content.
+[Create an issue](https://github.com/SAP-samples/customercheckout-fetchexchangerate-plugin/issues) in this repository if you find a bug or have questions about the content.
  
 For additional support, [ask a question in SAP Community](https://answers.sap.com/questions/ask.html).
 
@@ -39,3 +38,6 @@ If you wish to contribute code, offer fixes or improvements, please send a pull 
 
 ## License
 Copyright (c) 2024 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSE) file.
+
+## Credits
+Credits <a href="https://www.exchangerate-api.com">Rates By Exchange Rate API</a>

@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: sapcustomercheckout-fetchexchangerate-plugin
+Upstream-Name: customercheckout-fetchexchangerate-plugin
 Upstream-Contact: ospo@sap.com
-Source: <https://github.com/sap-samples/YOUR-REPO-NAME>
+Source: https://github.com/sap-samples/customercheckout-fetchexchangerate-plugin
 Disclaimer: The code in this project may include calls to APIs ("API Calls") of
  SAP or third-party products or services developed outside of this project
  ("External Products").
@@ -25,5 +25,5 @@ Disclaimer: The code in this project may include calls to APIs ("API Calls") of
  parties the right to use of access any SAP External Product, through API Calls.
 
 Files: *
-Copyright:  2024 SAP SE or an SAP affiliate company and sapcustomercheckout-fetchexchangerate-plugin contributors
+Copyright:  2024 SAP SE or an SAP affiliate company and customercheckout-fetchexchangerate-plugin contributors
 License: Apache-2.0
